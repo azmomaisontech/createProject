@@ -56,6 +56,8 @@ li {
 
 form {
   width: 500px;
+  background: #fff;
+  padding: 1rem;
 }
 
 .form-group {
@@ -76,5 +78,5 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border-bottom: 3px solid var(--secondary-color);
+  border-bottom: 3px solid var(--pink-color);
 }

@@ -5,7 +5,7 @@ const SignedInLinks: React.FC = () => {
   return (
     <ul>
       <li>
-        <NavLink to="/">New Project</NavLink>
+        <NavLink to="/create">New Project</NavLink>
         <NavLink to="/">Log Out</NavLink>
         <NavLink to="/" className="btn btn-round btn-pink">
           AM
