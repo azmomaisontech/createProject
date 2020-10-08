@@ -1,0 +1,12 @@
+#dashboard .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+#dashboard .projectlist .project {
+  margin-bottom: 3rem;
+}
+
+#dashboard .notification {
+  text-align: center;
+}

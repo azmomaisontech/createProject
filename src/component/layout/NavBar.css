@@ -1,0 +1,25 @@
+#navbar {
+  background: var(--primary-color);
+  color: #fff;
+  height: 70px;
+}
+
+#navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#navbar a {
+  color: #fff;
+}
+
+#navbar ul li a {
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+#navbar ul li a:hover {
+  opacity: 0.5;
+}
