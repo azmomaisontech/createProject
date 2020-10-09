@@ -1,10 +1,16 @@
 #dashboard .grid-container {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 #dashboard .projectlist .project {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #fff;
+}
+
+#dashboard .projectlist .project h2 {
+  margin-bottom: 0.5rem;
 }
 
 #dashboard .notification {

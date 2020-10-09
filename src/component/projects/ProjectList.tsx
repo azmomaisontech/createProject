@@ -1,12 +1,18 @@
 import React from "react";
-import ProjectSummary from "./ProjectSummary";
 
-const ProjectList: React.FC = () => {
+interface Prop {
+  project: { id: string; title: string; content: string };
+}
+
+const ProjectList: React.FC<Prop> = ({ project }) => {
+  const { title } = project;
   return (
     <section className="projectlist">
-      <ProjectSummary />
-      <ProjectSummary />
-      <ProjectSummary />
+      <div className="project">
+        <h2>{title}</h2>
+        <p>Posted by Azmo Tech</p>
+        <p>3rd September, 2am</p>
+      </div>
     </section>
   );
 };

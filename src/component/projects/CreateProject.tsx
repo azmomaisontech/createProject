@@ -1,7 +1,15 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import { createProject } from "../../redux/action/projectAction";
+import { CreateProjectType } from "../../redux/action/type";
 import "./CreateProject.css";
 
-const CreateProject: React.FC = () => {
+interface Prop {
+  createProject: (project: CreateProjectType) => void;
+}
+
+const CreateProject: React.FC<Prop> = (props) => {
+  const { createProject } = props;
   const [project, setProject] = useState({
     title: "",
     content: "",
@@ -13,7 +21,8 @@ const CreateProject: React.FC = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log(project);
+    createProject(project);
+    setProject({ title: "", content: "" });
   };
 
   return (
@@ -40,4 +49,8 @@ const CreateProject: React.FC = () => {
   );
 };
 
-export default CreateProject;
+const mapDispatchToProps = (dispatch: any) => ({
+  createProject: (project: CreateProjectType) => dispatch(createProject(project)),
+});
+
+export default connect(null, mapDispatchToProps)(CreateProject);
